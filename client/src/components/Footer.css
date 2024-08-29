@@ -1,0 +1,11 @@
+.footer {
+  padding: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.footer-text {
+  line-height: 1.8;
+}
