@@ -1,6 +1,6 @@
 # The New York Times News App
 
-![App Screenshot](./client/public/images/screenshot.png)
+![App Screenshot](./client/public/images/screenshot.jpg)
 
 This project is a React-based web application that displays the latest news articles using The New York Times API. The application is built with a focus on simplicity, responsiveness, and a clean UI.
 
