@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Articles.css";
+import ArticleItem from "./ArticleItem";
+import Pagination from "./Pagination";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -24,7 +26,6 @@ const Articles = () => {
     fetchArticles();
   }, []);
 
-  // Get current articles
   const indexOfLastArticle = currentPage * articlesPerPage;
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
   const currentArticles = articles.slice(
@@ -39,61 +40,19 @@ const Articles = () => {
       <h2 className="article-heading">Today's Top Stories</h2>
       <ul className="articles-list">
         {Array.isArray(currentArticles) && currentArticles.length > 0 ? (
-          currentArticles.map((article, index) => {
-            // Formatting data
-            const formattedDate = new Date(
-              article.published_date
-            ).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            });
-
-            return (
-              <li key={index} className="article-item">
-                <a
-                  href={article.url}
-                  className="article-link"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <figure className="article-image-container">
-                    <img
-                      src={article.multimedia[1].url}
-                      alt={article.multimedia[1].caption}
-                      className="article-image"
-                    />
-                    <span className="tags">
-                      <p className="article-section tag">{article.section}</p>
-                      <p className="article-subsection tag">
-                        {article.subsection}
-                      </p>
-                    </span>
-                  </figure>
-                  <h3 className="article-title">{article.title}</h3>
-                  <p className="article-abstract">{article.abstract}</p>
-                </a>
-
-                <p className="article-byline">{article.byline}</p>
-
-                <p className="article-date">{formattedDate}</p>
-              </li>
-            );
-          })
+          currentArticles.map((article, index) => (
+            <ArticleItem key={index} article={article} />
+          ))
         ) : (
           <p>Loading...</p>
         )}
       </ul>
 
-      <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentPage(index + 1)}
-            className={index + 1 === currentPage ? "btn active" : "btn"}>
-            {index + 1}
-          </button>
-        ))}
-      </div>
+      <Pagination
+        totalPages={totalPages}
+        currentPage={currentPage}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };
