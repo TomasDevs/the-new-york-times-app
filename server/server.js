@@ -33,7 +33,7 @@ app.get("/api/articles", async (req, res) => {
   }
 });
 
-// Start the server on the specified port
+// Start the server on the specified port and log a message
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
