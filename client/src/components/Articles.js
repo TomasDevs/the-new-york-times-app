@@ -3,6 +3,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "./Articles.css";
 import ArticleItem from "./ArticleItem";
 import Pagination from "./Pagination";
+import Spinner from "./Spinner";
 
 const Articles = () => {
   // State to store the list of articles
@@ -54,7 +55,7 @@ const Articles = () => {
       <h2 className="article-heading">Today's Top Stories</h2>
       {loading ? (
         // Show this message while the articles are loading
-        <p>Loading...</p>
+        <Spinner />
       ) : (
         // Show the list of articles with animation when they appear or disappear
         <TransitionGroup component="ul" className="articles-list">
