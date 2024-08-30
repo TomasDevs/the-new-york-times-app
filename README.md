@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# The New York Times News App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![App Screenshot](./client/public/images/screenshot.png)
 
-## Available Scripts
+This project is a React-based web application that displays the latest news articles using The New York Times API. The application is built with a focus on simplicity, responsiveness, and a clean UI.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Fetches and displays the latest news articles from The New York Times.
+- Responsive design that adapts to various screen sizes.
+- Pagination to navigate through multiple pages of articles.
+- Smooth animations when loading articles.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js and npm installed on your machine.
+- A New York Times API key, which you can obtain from [NY Times Developer Portal](https://developer.nytimes.com/apis).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+    git clone https://github.com/yourusername/the-new-york-times-app.git
+    cd the-new-york-times-app
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies for both client and server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+    cd client
+    npm install
+    npm install react-transition-group
+    cd ../server
+    npm install
+```
 
-### `npm run eject`
+3. Create a .env file in the server directory and add your New York Times API key:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+    NYT_API_KEY=your_api_key_here
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Running the Application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Start the server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+    cd server
+    npm start
+```
 
-## Learn More
+2. Start the client:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+    cd ../client
+    npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Open your browser and navigate to http://localhost:3000 to view the application.
 
-### Code Splitting
+## Live Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Check out the live demo of the application [here](https://nyt-news-daily.vercel.app/).
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [MIT License](https://opensource.org/license/MIT) for details.
