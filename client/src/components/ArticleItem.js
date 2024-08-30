@@ -22,6 +22,7 @@ const ArticleItem = ({ article }) => {
             src={article.multimedia[1].url}
             alt={article.multimedia[1].caption}
             className="article-image"
+            loading="lazy"
           />
           <span className="tags">
             <p className="article-section tag">{article.section}</p>
