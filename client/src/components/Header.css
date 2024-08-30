@@ -11,6 +11,15 @@
   width: 16rem;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+}
+
 @media (min-width: 768px) {
   .main-heading {
     width: 20rem;
