@@ -25,7 +25,7 @@ const Articles = () => {
         // );
         // Fetch articles from the New York Times API
         const response = await fetch(
-          `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.NYT_API_KEY}`
+          `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_NYT_API_KEY}`
         );
         const data = await response.json();
         if (data.results) {
