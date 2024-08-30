@@ -8,6 +8,7 @@
 
 # environment variables
 /server/.env
+/client/.env.local
 
 # testing
 /coverage
