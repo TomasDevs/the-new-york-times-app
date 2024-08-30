@@ -23,7 +23,7 @@ This project is a React-based web application that displays the latest news arti
 1. Clone the repository:
 
 ```bash
-    git clone https://github.com/yourusername/the-new-york-times-app.git
+    git clone https://github.com/tomasdevs/the-new-york-times-app.git
     cd the-new-york-times-app
 ```
 
