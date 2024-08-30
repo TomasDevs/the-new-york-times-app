@@ -35,6 +35,7 @@ This project is a React-based web application that displays the latest news arti
     npm install react-transition-group
     cd ../server
     npm install
+    npm install dotenv
 ```
 
 3. Create a .env file in the server directory and add your New York Times API key:
@@ -43,7 +44,7 @@ This project is a React-based web application that displays the latest news arti
     NYT_API_KEY=your_api_key_here
 ```
 
-### Running the Application
+### Running the Application Locally
 
 1. Start the server:
 
