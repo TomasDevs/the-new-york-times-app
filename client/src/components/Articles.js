@@ -19,13 +19,13 @@ const Articles = () => {
     // Function to get articles from the backend
     const fetchArticles = async () => {
       try {
-        // Fetch articles from the local backend
-        // const response = await fetch(
-        //   `${process.env.REACT_APP_API_URL}/api/articles`
-        // );
-        // Fetch articles from the New York Times API
+        // Fetch data from the appropriate API based on the environment
+        // If in production, use the New York Times API
+        // If in development, use the local backend API
         const response = await fetch(
-          `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_NYT_API_KEY}`
+          process.env.NODE_ENV === "production"
+            ? `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_NYT_API_KEY}`
+            : `${process.env.REACT_APP_API_URL}/api/articles`
         );
         const data = await response.json();
         if (data.results) {
