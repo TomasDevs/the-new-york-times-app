@@ -1,5 +1,5 @@
 .pagination {
-  margin: 4rem 0;
+  margin: 2.5rem 0;
   text-align: center;
 }
 
@@ -20,4 +20,10 @@
 
 .pagination .btn:hover {
   background-color: #181818;
+}
+
+@media (min-width: 992px) {
+  .pagination {
+    margin: 4rem 0;
+  }
 }

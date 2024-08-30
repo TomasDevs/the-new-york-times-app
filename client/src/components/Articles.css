@@ -1,13 +1,29 @@
 .article-heading {
-  padding: 2rem 0;
+  padding: 1.4rem 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 .articles-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 1.2rem;
   list-style-type: none;
   padding: 0;
+}
+
+@media (min-width: 768px) {
+  .article-heading {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .article-heading {
+    padding: 2rem 0;
+    font-size: 2rem;
+  }
+  .articles-list {
+    gap: 2rem;
+  }
 }

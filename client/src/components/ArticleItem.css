@@ -28,6 +28,7 @@
 
 .article-title {
   margin: 0.5rem 0 0.7rem;
+  font-size: 1.1rem;
 }
 
 .article-abstract {
@@ -62,5 +63,11 @@
   border-radius: 5px;
   &:empty {
     display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .article-title {
+    font-size: 1.17em;
   }
 }

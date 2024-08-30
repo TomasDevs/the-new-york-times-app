@@ -1,12 +1,33 @@
 .header {
   display: flex;
   justify-content: center;
-  padding: 3rem 0;
+  padding: 2rem 0 1rem;
   margin: 0 auto;
   text-align: center;
 }
 
 .main-heading {
   text-align: center;
-  width: 30rem;
+  width: 16rem;
+}
+
+@media (min-width: 768px) {
+  .main-heading {
+    width: 20rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-heading {
+    width: 25rem;
+  }
+  .header {
+    padding: 3rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-heading {
+    width: 30rem;
+  }
 }

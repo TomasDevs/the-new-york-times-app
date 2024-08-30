@@ -1,11 +1,21 @@
 .footer {
-  padding: 2rem;
-  margin-bottom: 4rem;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
   text-align: center;
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
 }
 
 .footer-text {
-  line-height: 1.8;
+  line-height: 1.5;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+  .footer-text {
+    line-height: 1.8;
+  }
 }
